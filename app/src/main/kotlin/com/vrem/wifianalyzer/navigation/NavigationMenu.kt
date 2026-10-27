@@ -32,6 +32,7 @@ import com.vrem.wifianalyzer.navigation.items.navigationItemChannelAvailable
 import com.vrem.wifianalyzer.navigation.items.navigationItemChannelGraph
 import com.vrem.wifianalyzer.navigation.items.navigationItemChannelRating
 import com.vrem.wifianalyzer.navigation.items.navigationItemExport
+import com.vrem.wifianalyzer.navigation.items.navigationItemScanThrottle
 import com.vrem.wifianalyzer.navigation.items.navigationItemSettings
 import com.vrem.wifianalyzer.navigation.items.navigationItemTimeGraph
 import com.vrem.wifianalyzer.navigation.items.navigationItemVendors
@@ -98,6 +99,12 @@ enum class NavigationMenu(
         MENU_ITEM_INVALID_ID,
         title = R.string.action_vendors,
         navigationItem = navigationItemVendors,
+    ),
+    SCAN_THROTTLE_TEST(
+        R.id.nav_drawer_scan_throttle,
+        MENU_ITEM_INVALID_ID,
+        title = R.string.action_scan_throttle_test,
+        navigationItem = navigationItemScanThrottle,
     ),
     SETTINGS(
         R.id.nav_drawer_settings,

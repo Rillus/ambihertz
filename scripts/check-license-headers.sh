@@ -12,7 +12,7 @@ header_lines=30
 missing=()
 while IFS= read -r -d '' file; do
     header=$(head -n "$header_lines" "$file")
-    if ! grep -q 'VREM Software Development' <<<"$header" ||
+    if ! grep -qE 'VREM Software Development|Ambihertz contributors' <<<"$header" ||
         ! grep -q 'GNU General Public License' <<<"$header"; then
         missing+=("$file")
     fi
