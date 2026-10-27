@@ -39,6 +39,7 @@ class NavigationMenuControllerTest {
             NavigationMenu.EXPORT,
             NavigationMenu.CHANNEL_AVAILABLE,
             NavigationMenu.VENDORS,
+            NavigationMenu.SCAN_THROTTLE_TEST,
             NavigationMenu.SETTINGS,
             NavigationMenu.ABOUT,
         )

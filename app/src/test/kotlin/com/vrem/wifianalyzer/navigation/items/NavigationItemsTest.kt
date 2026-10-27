@@ -22,6 +22,7 @@ import android.view.View
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.vrem.wifianalyzer.about.AboutFragment
 import com.vrem.wifianalyzer.settings.SettingsFragment
+import com.vrem.wifianalyzer.throttle.ScanThrottleFragment
 import com.vrem.wifianalyzer.vendor.VendorFragment
 import com.vrem.wifianalyzer.wifi.accesspoint.AccessPointsFragment
 import com.vrem.wifianalyzer.wifi.channelavailable.ChannelAvailableFragment
@@ -44,6 +45,7 @@ class NavigationItemsTest {
         assertThat((navigationItemTimeGraph as FragmentItem).fragment is TimeGraphFragment).isTrue
         assertThat((navigationItemChannelAvailable as FragmentItem).fragment is ChannelAvailableFragment).isTrue
         assertThat((navigationItemVendors as FragmentItem).fragment is VendorFragment).isTrue
+        assertThat((navigationItemScanThrottle as FragmentItem).fragment is ScanThrottleFragment).isTrue
         assertThat((navigationItemSettings as FragmentItem).fragment is SettingsFragment).isTrue
         assertThat((navigationItemAbout as FragmentItem).fragment is AboutFragment).isTrue
     }
@@ -61,6 +63,7 @@ class NavigationItemsTest {
         assertThat(navigationItemExport.registered).isFalse
         assertThat(navigationItemChannelAvailable.registered).isFalse
         assertThat(navigationItemVendors.registered).isFalse
+        assertThat(navigationItemScanThrottle.registered).isFalse
         assertThat(navigationItemSettings.registered).isFalse
         assertThat(navigationItemAbout.registered).isFalse
     }
@@ -73,6 +76,7 @@ class NavigationItemsTest {
         assertThat(navigationItemTimeGraph.visibility).isEqualTo(View.VISIBLE)
         assertThat(navigationItemChannelAvailable.visibility).isEqualTo(View.VISIBLE)
         assertThat(navigationItemVendors.visibility).isEqualTo(View.GONE)
+        assertThat(navigationItemScanThrottle.visibility).isEqualTo(View.GONE)
         assertThat(navigationItemExport.visibility).isEqualTo(View.GONE)
         assertThat(navigationItemSettings.visibility).isEqualTo(View.GONE)
         assertThat(navigationItemAbout.visibility).isEqualTo(View.GONE)

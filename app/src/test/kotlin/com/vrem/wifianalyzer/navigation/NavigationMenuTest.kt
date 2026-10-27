@@ -30,6 +30,7 @@ import com.vrem.wifianalyzer.navigation.items.navigationItemChannelAvailable
 import com.vrem.wifianalyzer.navigation.items.navigationItemChannelGraph
 import com.vrem.wifianalyzer.navigation.items.navigationItemChannelRating
 import com.vrem.wifianalyzer.navigation.items.navigationItemExport
+import com.vrem.wifianalyzer.navigation.items.navigationItemScanThrottle
 import com.vrem.wifianalyzer.navigation.items.navigationItemSettings
 import com.vrem.wifianalyzer.navigation.items.navigationItemTimeGraph
 import com.vrem.wifianalyzer.navigation.items.navigationItemVendors
@@ -53,7 +54,7 @@ class NavigationMenuTest {
 
     @Test
     fun navigationMenu() {
-        assertThat(NavigationMenu.entries).hasSize(9)
+        assertThat(NavigationMenu.entries).hasSize(10)
     }
 
     @Test
@@ -64,6 +65,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.TIME_GRAPH.navigationItem).isEqualTo(navigationItemTimeGraph)
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.navigationItem).isEqualTo(navigationItemChannelAvailable)
         assertThat(NavigationMenu.VENDORS.navigationItem).isEqualTo(navigationItemVendors)
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.navigationItem).isEqualTo(navigationItemScanThrottle)
         assertThat(NavigationMenu.EXPORT.navigationItem).isEqualTo(navigationItemExport)
         assertThat(NavigationMenu.SETTINGS.navigationItem).isEqualTo(navigationItemSettings)
         assertThat(NavigationMenu.ABOUT.navigationItem).isEqualTo(navigationItemAbout)
@@ -78,6 +80,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.EXPORT.title).isEqualTo(R.string.action_export)
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.title).isEqualTo(R.string.action_channel_available)
         assertThat(NavigationMenu.VENDORS.title).isEqualTo(R.string.action_vendors)
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.title).isEqualTo(R.string.action_scan_throttle_test)
         assertThat(NavigationMenu.SETTINGS.title).isEqualTo(R.string.action_settings)
         assertThat(NavigationMenu.ABOUT.title).isEqualTo(R.string.action_about)
     }
@@ -95,6 +98,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.wiFiBandSwitchable()).isFalse
         assertThat(NavigationMenu.EXPORT.wiFiBandSwitchable()).isFalse
         assertThat(NavigationMenu.VENDORS.wiFiBandSwitchable()).isFalse
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.wiFiBandSwitchable()).isFalse
         assertThat(NavigationMenu.SETTINGS.wiFiBandSwitchable()).isFalse
         assertThat(NavigationMenu.ABOUT.wiFiBandSwitchable()).isFalse
     }
@@ -112,6 +116,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.registered()).isFalse
         assertThat(NavigationMenu.EXPORT.registered()).isFalse
         assertThat(NavigationMenu.VENDORS.registered()).isFalse
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.registered()).isFalse
         assertThat(NavigationMenu.SETTINGS.registered()).isFalse
         assertThat(NavigationMenu.ABOUT.registered()).isFalse
     }
@@ -125,6 +130,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.EXPORT.idDrawer).isEqualTo(R.id.nav_drawer_export)
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.idDrawer).isEqualTo(R.id.nav_drawer_channel_available)
         assertThat(NavigationMenu.VENDORS.idDrawer).isEqualTo(R.id.nav_drawer_vendors)
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.idDrawer).isEqualTo(R.id.nav_drawer_scan_throttle)
         assertThat(NavigationMenu.SETTINGS.idDrawer).isEqualTo(R.id.nav_drawer_settings)
         assertThat(NavigationMenu.ABOUT.idDrawer).isEqualTo(R.id.nav_drawer_about)
     }
@@ -138,6 +144,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.EXPORT.idBottom).isEqualTo(-1)
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.idBottom).isEqualTo(-1)
         assertThat(NavigationMenu.VENDORS.idBottom).isEqualTo(-1)
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.idBottom).isEqualTo(-1)
         assertThat(NavigationMenu.SETTINGS.idBottom).isEqualTo(-1)
         assertThat(NavigationMenu.ABOUT.idBottom).isEqualTo(-1)
     }
@@ -150,6 +157,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.TIME_GRAPH.navigationOptions).isEqualTo(navigationOptionOther)
         assertThat(NavigationMenu.CHANNEL_AVAILABLE.navigationOptions).isEqualTo(navigationOptionOff)
         assertThat(NavigationMenu.VENDORS.navigationOptions).isEqualTo(navigationOptionOff)
+        assertThat(NavigationMenu.SCAN_THROTTLE_TEST.navigationOptions).isEqualTo(navigationOptionOff)
         assertThat(NavigationMenu.EXPORT.navigationOptions).isEqualTo(navigationOptionOff)
         assertThat(NavigationMenu.SETTINGS.navigationOptions).isEqualTo(navigationOptionOff)
         assertThat(NavigationMenu.ABOUT.navigationOptions).isEqualTo(navigationOptionOff)
@@ -164,6 +172,7 @@ class NavigationMenuTest {
         assertThat(NavigationMenu.find(R.id.nav_drawer_export)).isEqualTo(NavigationMenu.EXPORT)
         assertThat(NavigationMenu.find(R.id.nav_drawer_channel_available)).isEqualTo(NavigationMenu.CHANNEL_AVAILABLE)
         assertThat(NavigationMenu.find(R.id.nav_drawer_vendors)).isEqualTo(NavigationMenu.VENDORS)
+        assertThat(NavigationMenu.find(R.id.nav_drawer_scan_throttle)).isEqualTo(NavigationMenu.SCAN_THROTTLE_TEST)
         assertThat(NavigationMenu.find(R.id.nav_drawer_settings)).isEqualTo(NavigationMenu.SETTINGS)
         assertThat(NavigationMenu.find(R.id.nav_drawer_about)).isEqualTo(NavigationMenu.ABOUT)
     }

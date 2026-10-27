@@ -101,6 +101,7 @@ class MainRobolectricTest {
             NavigationMenu.ACCESS_POINTS,
             NavigationMenu.CHANNEL_AVAILABLE,
             NavigationMenu.VENDORS,
+            NavigationMenu.SCAN_THROTTLE_TEST,
         ).forEach { selectMenuItem(it) }
 
         listOf(

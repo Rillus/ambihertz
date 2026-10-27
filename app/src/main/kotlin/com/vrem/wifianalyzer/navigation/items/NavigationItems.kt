@@ -21,6 +21,7 @@ import android.view.View
 import com.vrem.wifianalyzer.about.AboutFragment
 import com.vrem.wifianalyzer.export.Export
 import com.vrem.wifianalyzer.settings.SettingsFragment
+import com.vrem.wifianalyzer.throttle.ScanThrottleFragment
 import com.vrem.wifianalyzer.vendor.VendorFragment
 import com.vrem.wifianalyzer.wifi.accesspoint.AccessPointsFragment
 import com.vrem.wifianalyzer.wifi.channelavailable.ChannelAvailableFragment
@@ -35,5 +36,6 @@ val navigationItemTimeGraph: NavigationItem = FragmentItem(TimeGraphFragment())
 val navigationItemExport: NavigationItem = ExportItem(Export())
 val navigationItemChannelAvailable: NavigationItem = FragmentItem(ChannelAvailableFragment(), false)
 val navigationItemVendors: NavigationItem = FragmentItem(VendorFragment(), false, View.GONE)
+val navigationItemScanThrottle: NavigationItem = FragmentItem(ScanThrottleFragment(), false, View.GONE)
 val navigationItemSettings: NavigationItem = FragmentItem(SettingsFragment(), false, View.GONE)
 val navigationItemAbout: NavigationItem = FragmentItem(AboutFragment(), false, View.GONE)
