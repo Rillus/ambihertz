@@ -32,8 +32,8 @@ import androidx.core.content.ContextCompat
 
 class BleForegroundScanner(
     private val context: Context,
-    private val onBatch: (deviceIds: List<String>, rssiValues: List<Int>) -> Unit,
     private val handler: Handler = Handler(Looper.getMainLooper()),
+    private val onBatch: (deviceIds: List<String>, rssiValues: List<Int>) -> Unit,
 ) {
     private val callback =
         object : ScanCallback() {
